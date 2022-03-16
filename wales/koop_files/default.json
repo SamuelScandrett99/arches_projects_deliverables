@@ -1,0 +1,53 @@
+{
+    "port": 8080,
+    "cacheTimeout": 0,
+    "archesHosts": {
+        "<change_to_host_name>": {
+            "url": "<change_to_arches_url>",
+            "layers": {
+                "points": {
+                    "nodeid": "60120f77-9ff2-11ea-a530-000d3a86d704",
+                    "nodegroups": "60120f4f-9ff2-11ea-a530-000d3a86d704,60120f3d-9ff2-11ea-a530-000d3a86d704,60120f46-9ff2-11ea-a530-000d3a86d704,60120f61-9ff2-11ea-a530-000d3a86d704,60120f49-9ff2-11ea-a530-000d3a86d704,60120f58-9ff2-11ea-a530-000d3a86d704",
+                    "type": "Point",
+                    "use_display_values": true,
+                    "properties": {
+                        "nprn": "nprn",
+                        "community": "community",
+                        "unitary_authority": "unitary_authority",
+                        "old_county": "old_county",
+                        "site_type": "site_type",
+                        "period": "period"
+                    }
+                },
+                "polygons": {
+                    "nodeid": "60120f77-9ff2-11ea-a530-000d3a86d704",
+                    "nodegroups": "60120f4f-9ff2-11ea-a530-000d3a86d704,60120f3d-9ff2-11ea-a530-000d3a86d704,60120f46-9ff2-11ea-a530-000d3a86d704,60120f61-9ff2-11ea-a530-000d3a86d704,60120f49-9ff2-11ea-a530-000d3a86d704,60120f58-9ff2-11ea-a530-000d3a86d704",
+                    "type": "Polygon",
+                    "use_display_values": true,
+                    "properties": {
+                        "nprn": "nprn",
+                        "community": "community",
+                        "unitary_authority": "unitary_authority",
+                        "old_county": "old_county",
+                        "site_type": "site_type",
+                        "period": "period"
+                    }
+                },
+                "lines": {
+                    "nodeid": "60120f77-9ff2-11ea-a530-000d3a86d704",
+                    "nodegroups": "60120f4f-9ff2-11ea-a530-000d3a86d704,60120f3d-9ff2-11ea-a530-000d3a86d704,60120f46-9ff2-11ea-a530-000d3a86d704,60120f61-9ff2-11ea-a530-000d3a86d704,60120f49-9ff2-11ea-a530-000d3a86d704,60120f58-9ff2-11ea-a530-000d3a86d704",
+                    "type": "Line",
+                    "use_display_values": true,
+                    "properties": {
+                        "nprn": "nprn",
+                        "community": "community",
+                        "unitary_authority": "unitary_authority",
+                        "old_county": "old_county",
+                        "site_type": "site_type",
+                        "period": "period"
+                    }
+                }
+            }
+        }
+    }
+}
