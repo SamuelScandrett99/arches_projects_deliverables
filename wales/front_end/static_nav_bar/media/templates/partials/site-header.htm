@@ -1,0 +1,54 @@
+
+<!--
+ARCHES - a program developed to inventory and manage immovable cultural heritage.
+Copyright (C) 2013 J. Paul Getty Trust and World Monuments Fund
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+{% load staticfiles %}
+{% load i18n %}
+{% load template_tags %}
+<!-- header -->
+<header>
+  <nav role="nav" >
+    <a href="{% url 'home' %}" class="navbar-brand" ><img style="max-height: 80px; max-width: 80px;" src="{% static 'img/jersey_logo.png' %}" /></a>
+    <ul class="nav navbar-nav navbar-right">
+      {% if extra_links %}
+        {% include extra_links %}
+      {% endif %}
+      <li>
+        <a href="{% url 'search_home' %}">{% trans "Search" %}</a>
+      </li>
+      {% if user|can_create_resource_instance %}
+        <li>
+          <a href="{% url 'resource' %}">{% trans "Manage Data" %}</a>
+        </li>
+      {% endif %}
+      {% if user|has_group:"Graph Editor" %}
+      <li>
+        <a href="{% url 'graph' '' %}">{% trans "Design" %}</a>
+      </li>
+      {% endif %}
+      {% if user.username != 'anonymous' %}
+        <!-- li><a href="/user">User Profile</a></li -->
+        <li><a href="/auth/?logout=true&next=/">Logout</a></li>
+      {% else %}
+        <li><a href="/auth/?next={{ request.get_full_path }}">Login</a></li>
+      {% endif %}
+    </ul>
+    <!-- /.navbar-nav -->
+  </nav>
+  <!-- /.navbar -->
+</header>
+<!-- /header -->
