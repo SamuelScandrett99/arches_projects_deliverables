@@ -30,4 +30,4 @@ and finally the following code under `{% block body %}`
 ```
 5. Adjust `search.htm`
 
-In `search.htm`change `max-heigh` for Historic Themes, Date Interval, Download Results to `50px`
+In `search.htm` add the following to `style` `max-height:50px;` for Historic Themes, Date Interval
