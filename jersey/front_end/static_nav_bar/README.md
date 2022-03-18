@@ -28,3 +28,5 @@ and finally the following code under `{% block body %}`
 ```
 {% include 'partials/site-header.htm' %}
 ```
+5. Adjust `search.htm`
+In `search.htm`change `max-heigh` for Historic Themes, Date Interval, Download Results to `50px`
