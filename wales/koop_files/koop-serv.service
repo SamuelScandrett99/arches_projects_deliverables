@@ -1,0 +1,12 @@
+[Unit]
+Description=Koopjs server for ArcGIS integration
+After=network.target
+
+[Service]
+User=sa_arches
+Restart=always
+RestartSec=1
+ExecStart=:~/Projects/koopjs/yarn start
+
+[Install]
+WantedBy=multi-user.target
