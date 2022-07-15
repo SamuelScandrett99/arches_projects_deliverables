@@ -65,3 +65,4 @@ In `map.js` found in `media > js > viewmodels` in your core Arches folder add th
 - Change the ajax call to update rather than post
 - Make it work on basemaps and overlays
 - Make it feel like it isn't bodged 
+- Wrap the view in try/catch
