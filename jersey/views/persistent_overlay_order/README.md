@@ -82,3 +82,4 @@ In the  `javascript.htm` file found in core arches `templates` folder add the fo
 - Wrap the view in try/catch
 - Worked on dev without js template changes - needs looking into
 - Worked on dev without sorting function - needs looking into
+- Fix resource layer order
