@@ -58,6 +58,20 @@ In `map.js` found in `media > js > viewmodels` in your core Arches folder add th
          }
 ```
 
+and a sorting function below `var mapLayers` found on line `135`
+```
+mapLayers = mapLayers.sort((a, b) => b.sortorder - a.sortorder)
+```
+
+
+## Step 6
+### Javascript changes
+
+In the  `javascript.htm` file found in core arches `templates` folder add the following to the bottom of `mapLayers` definition
+```
+'sortorder': {{map_layer.sortorder|default_if_none:"null"|unlocalize}}
+```
+
 # TODOs
 
 - Pull the view out of core arches
