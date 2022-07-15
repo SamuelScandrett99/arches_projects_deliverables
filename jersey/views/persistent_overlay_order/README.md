@@ -3,6 +3,7 @@
 ## Notes
 
 - Currently all users with edit permissoins can edit the overlay order
+- There is not need to add an sort order to already existing maps, the code will add it after they are rearranged once
 
 ## Step 1
 ### Adjusting `Map Layer` Model
