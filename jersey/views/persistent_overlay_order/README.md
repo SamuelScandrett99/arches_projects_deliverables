@@ -4,6 +4,7 @@
 
 - Currently all users with edit permissoins can edit the overlay order
 - There is not need to add an sort order to already existing maps, the code will add it after they are rearranged once
+- Currently only works on overlays
 
 ## Step 1
 ### Adjusting `Map Layer` Model
@@ -61,4 +62,5 @@ In `map.js` found in `media > js > viewmodels` in your core Arches folder add th
 - Pull the view out of core arches
 - Pull the url out of core arches urls
 - Change the ajax call to update rather than post
+- Make it work on basemaps and overlays
 - Make it feel like it isn't bodged 
