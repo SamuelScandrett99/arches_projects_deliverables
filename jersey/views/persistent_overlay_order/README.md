@@ -80,3 +80,5 @@ In the  `javascript.htm` file found in core arches `templates` folder add the fo
 - Make it work on basemaps and overlays
 - Make it feel like it isn't bodged 
 - Wrap the view in try/catch
+- Worked on dev without js template changes - needs looking into
+- Worked on dev without sorting function - needs looking into
