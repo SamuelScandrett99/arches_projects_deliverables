@@ -55,6 +55,7 @@ In `map.js` found in `media > js > viewmodels` in your core Arches folder add th
                 }),
                 url: arches.urls.root + "reorder_maps",
             })
+         }
 ```
 
 # TODOs
