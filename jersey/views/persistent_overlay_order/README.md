@@ -3,15 +3,20 @@
 ## Notes
 
 - Currently all users with edit permissoins can edit the overlay order
-- There is not need to add an sort order to already existing maps, the code will add it after they are rearranged once
+- There is no need to add an sort order to already existing maps, the code will add it after they are rearranged once
 - Currently only works on overlays
 
 ## Step 1
-### Adjusting `Map Layer` Model
+### Adjusting Models
 
 In `models.py` of your core Arches folder add the following line to `MapLayer` class below `searchonly`
 ```
-sortorder = models.IntegerField(blank=True, null=True, default=None)
+layersortorder = models.IntegerField(blank=True, null=True, default=None)
+```
+
+And under `Node` class below `exportable`
+```
+layersortorder = models.IntegerField(blank=True, null=True, default=None)
 ```
 
 
@@ -60,7 +65,7 @@ In `map.js` found in `media > js > viewmodels` in your core Arches folder add th
 
 and a sorting function below `var mapLayers` found on line `135`
 ```
-mapLayers = mapLayers.sort((a, b) => b.sortorder - a.sortorder)
+mapLayers = mapLayers.sort((a, b) => parseInt(a.layersortorder) - parseInt(b.layersortorder))
 ```
 
 
@@ -73,11 +78,13 @@ In the  `javascript.htm` file found in core arches `templates` folder add the fo
 ```
 
 # TODOs
+- Need to figure out why overlays are not getting `layerorder` in the front end 
+
 
 - Pull the view out of core arches
 - Pull the url out of core arches urls
 - Change the ajax call to update rather than post
-- Make it work on basemaps and overlays
+- Make it work on overlays
 - Make it feel like it isn't bodged 
 - Wrap the view in try/catch
 - Worked on dev without js template changes - needs looking into
