@@ -52,15 +52,26 @@ url(r"^reorder_maps", ReorderMaps.as_view(), name ="reorder_maps"),
 In `map.js` found in `media > js > viewmodels` in your core Arches folder add the following handler
 ```
         ko.bindingHandlers.sortable.afterMove = function(e) {
-            const map_order = e.sourceParent()
+            const map_order = ko.observableArray(e.sourceParent())
+            var new_order = []
+           
+            for (let i = 0; i < map_order().length; i++) {
+                const element = map_order()[i];
+                .push({
+                    "maplayerid": element.maplayerid,
+                    "layersortorder": i,
+                    "is_resource_layer": element.is_resource_layer,
+                })
+            }
+            
             $.ajax({
                 type: "POST",
                 data: JSON.stringify({
-                    map_order: map_order
+                    map_order: new_order
                 }),
                 url: arches.urls.root + "reorder_maps",
             })
-         }
+        }
 ```
 
 and a sorting function below `var mapLayers` found on line `135`
