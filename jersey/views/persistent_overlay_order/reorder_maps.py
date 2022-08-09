@@ -17,9 +17,8 @@ class ReorderMaps(BaseManagerView):
         json = request.body
         data = JSONDeserializer().deserialize(json)
         maps = MapLayer.objects.all()
-        # breakpoint()
-        for i, map in enumerate(data['map_order']):
-            print(i)
+        breakpoint()
+        for map in data['map_order']:
             try:
                 temp = maps.get(maplayerid = map['maplayerid'])
             except MapLayer.DoesNotExist:
@@ -29,11 +28,11 @@ class ReorderMaps(BaseManagerView):
                 except Node.DoesNotExist:
                     temp = None
                 else:
-                    temp.layersortorder = i
+                    temp.layersortorder = map['layersortorder']
                     temp.save()
                     print(vars(temp))          
             else:
-                temp.layersortorder = i
+                temp.layersortorder = map['layersortorder']
                 temp.save()
                 
                 
