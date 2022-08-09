@@ -22,20 +22,19 @@ class ReorderMaps(BaseManagerView):
             print(i)
             try:
                 temp = maps.get(maplayerid = map['maplayerid'])
-                
-                temp.layersortorder = i
-                temp.save()
             except MapLayer.DoesNotExist:
                 #Just to suppress any errors in the front end if stuff fails
-                
                 try:
                     temp = Node.objects.get(nodeid = map['maplayerid'])
+                except Node.DoesNotExist:
+                    temp = None
+                else:
                     temp.layersortorder = i
                     temp.save()
-                    print(vars(temp))
-                    
-                except Node.DoesNotExist:
-                    #Just to suppress any errors in the front end if stuff fails
-                    temp = None
+                    print(vars(temp))          
+            else:
+                temp.layersortorder = i
+                temp.save()
+                
                 
         return HttpResponse("OK")  
