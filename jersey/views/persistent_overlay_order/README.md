@@ -57,7 +57,7 @@ In `map.js` found in `media > js > viewmodels` in your core Arches folder add th
            
             for (let i = 0; i < map_order().length; i++) {
                 const element = map_order()[i];
-                .push({
+                new_order.push({
                     "maplayerid": element.maplayerid,
                     "layersortorder": i,
                     "is_resource_layer": element.is_resource_layer,
