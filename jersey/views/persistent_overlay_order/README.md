@@ -74,7 +74,13 @@ mapLayers = mapLayers.sort((a, b) => parseInt(a.layersortorder) - parseInt(b.lay
 
 In the  `javascript.htm` file found in core arches `templates` folder add the following to the bottom of `mapLayers` definition
 ```
-'sortorder': {{map_layer.sortorder|default_if_none:"null"|unlocalize}}
+'layersortorder': {{map_layer.sortorder|default_if_none:"null"|unlocalize}}
+```
+
+And under `resource_map_layers` add the following 
+
+```
+'layersortorder': {{resource_map_layer.layersortorder|default_if_none:"null"|unlocalize}}
 ```
 
 # TODOs
