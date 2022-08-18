@@ -4,7 +4,7 @@
 
 - Currently all users with edit permissoins can edit the overlay order
 - There is no need to add an sort order to already existing maps, the code will add it after they are rearranged once
-- Currently only works on overlays
+- Currently only works on overlays (see TODOs)
 
 ## Step 1
 ### Adjusting Models
@@ -103,7 +103,7 @@ And under `resource_map_layers` add the following
 - Change the ajax call to update rather than post
 - Make it work on overlays
 - Make it feel like it isn't bodged 
-- Wrap the view in try/catch
-- Worked on dev without js template changes - needs looking into
-- Worked on dev without sorting function - needs looking into
-- Fix resource layer order
+- ~~Wrap the view in try/catch~~
+- ~~Worked on dev without js template changes - needs looking into~~
+- ~~Worked on dev without sorting function - needs looking into~~
+- Fix resource layer order - works on local dev, does not work on live
