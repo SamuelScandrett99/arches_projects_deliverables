@@ -17,7 +17,6 @@ class ReorderMaps(BaseManagerView):
         json = request.body
         data = JSONDeserializer().deserialize(json)
         maps = MapLayer.objects.all()
-        breakpoint()
         for map in data['map_order']:
             try:
                 temp = maps.get(maplayerid = map['maplayerid'])
